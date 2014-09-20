@@ -1,12 +1,14 @@
 #This is a shell
 This is a shell I'm making for basically no reason. It works just like 
 bash, but lacks some of the features.
+
 #Features
 - Navigate file system with 'cd' command
 - Run external programs both locally and from PATH variable
 - Pipe output from one program to the input of another
 - Redirect command output to files (overwriting or appending)
 - Read basic scripts consisting of commands to execute in order
+
 #Built in commands/Syntax
 'cd' - change directory
 'exit' - exit shell
