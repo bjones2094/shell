@@ -117,8 +117,16 @@ void parseCommand(std::string command)
 	{
 		if(strcmp(token, "|") == 0)	// Pipe between processes
 		{
-			pipeBuf.push_back(expressionBuf);
-			expressionBuf.clear();
+			if(expressionBuf.size() > 0)	// Check that there are tokens before pipe
+			{
+				pipeBuf.push_back(expressionBuf);
+				expressionBuf.clear();
+			}
+			else
+			{
+				std::cout << "Error: no command given as pipe input" << std::endl;
+				return;
+			}
 		}
 		else if((strcmp(token, ">") == 0) || (strcmp(token, ">>") == 0))	// Redirect output to file
 		{
