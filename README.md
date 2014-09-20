@@ -12,7 +12,7 @@ bash, but lacks some of the features.
 #Built in commands/Syntax
 - 'cd' - change directory
 - 'exit' - exit shell
-- '<command1> | <command2>' - pipe output from command1 to input of command2
+- 'command1 | command2' - pipe output from command1 to input of command2
 - '(series of commands) > file' - write output to file
 - '(series of commands) >> file' - append output to file
 
