@@ -66,6 +66,8 @@ void interactiveLoop()
 		return;
 	}
 	
+	cwdName = userName;
+	
 	while(true)
 	{
 		std::cout << prefix << cwdName << "> ";
@@ -490,6 +492,10 @@ void cd(std::string pathName)
        		if (getcwd(temp, sizeof(temp)) != NULL)
        		{
        			cwdName = temp;
+       			if(cwdName != "/")
+       			{
+       				cwdName = cwdName.substr(cwdName.find_last_of('/') + 1);	// Only print local directory name
+       			}
        		} 
 	}
 	else
