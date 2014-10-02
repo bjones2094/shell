@@ -111,7 +111,7 @@ void parseCommand(std::string command)
 	int saved_stdout;	// For saving stdout descriptor after redirect
 	bool redirect = false;	// If stdout has been redirected
 
-	char * cmdString = new char[command.length()];
+	char cmdString[1024];
 	strcpy(cmdString, command.c_str());
 	char * token = strtok(cmdString, " \n");	// Seperate commands by space and endline
 	
